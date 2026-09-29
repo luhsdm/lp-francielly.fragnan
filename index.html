@@ -1,1020 +1,295 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Francielly Fragnan | Parto em Foco — Fotografia Documental em São Paulo</title>
-    <meta name="description" content="Francielly Fragnan — Parto em Foco. Especialista em registrar sentimentos reais. Fotografia documental de parto e gestantes em São Paulo. Credenciada nas principais maternidades de SP. Nascer com respeito importa!">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francielly Fragnan | Parto em Foco — Fotografia Documental em São Paulo</title>
+<meta name="description" content="Francielly Fragnan — Parto em Foco. Fotografia documental de parto e gestantes em São Paulo. Sentimentos reais, presença silenciosa e respeito. Nascer com respeito importa.">
+<meta property="og:title" content="Francielly Fragnan | Parto em Foco">
+<meta property="og:description" content="Fotografia documental de parto e gestantes em São Paulo. Sentimentos reais, presença silenciosa e respeito.">
+<meta property="og:image" content="assets/opt/img_7097.jpg">
 
-    <!-- Tailwind Configuration com a Identidade Visual Oficial do Canva -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Paleta Oficial Extraída do Brand Kit Canva:
-                        marsala: {
-                            50: '#FBF5F5',
-                            100: '#F5E8E9',
-                            200: '#EBD1D3',
-                            300: '#D9ABB0',
-                            400: '#B86F76',
-                            500: '#94414A',
-                            600: '#7E252B',
-                            700: '#69171A', // Cor Primária Oficial
-                            800: '#541215',
-                            900: '#420C0F',
-                            950: '#2E0608',
-                        },
-                        blush: {
-                            50: '#FAF7F7',
-                            100: '#F5EFEF',
-                            200: '#EDDEDE', // Cor Oficial Blush Nude
-                            300: '#E2CECE',
-                            400: '#D3B6B6',
-                            500: '#C29C9C',
-                        },
-                        roseWood: {
-                            50: '#FAF3F3',
-                            100: '#F5E6E6',
-                            200: '#EDD0D0',
-                            300: '#E2B3B3',
-                            400: '#D29797', // Cor Oficial Rose Wood
-                            500: '#BE7D7D',
-                            600: '#A46363',
-                        },
-                        warmOffWhite: {
-                            50: '#FFFFFF',
-                            100: '#FAF6F2', // Cor Oficial de Fundo Linho/Off-White
-                            200: '#F5ECE2',
-                            300: '#EEE1D2',
-                            400: '#E2CEB9',
-                        },
-                        terracotta: {
-                            50: '#FDF6F2',
-                            100: '#FAECE3',
-                            200: '#F3D6C5',
-                            300: '#E7B79D',
-                            400: '#D48E6C',
-                            500: '#BF6C42',
-                            600: '#A74F22', // Cor Oficial Terracota / Parto em Foco
-                            700: '#8A3E18',
-                            800: '#703316',
-                        },
-                        whatsapp: {
-                            500: '#25D366',
-                            600: '#1EBE5D',
-                            700: '#128C7E',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        editorial: ['Cormorant Garamond', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Ticker Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            width: max-content;
-            animation: marquee 32s linear infinite;
-        }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-
-        /* Glass and organic brand styling */
-        .glass-brand {
-            background: rgba(250, 246, 242, 0.90);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(210, 151, 151, 0.35);
-        }
-        .card-brand {
-            background: #FFFFFF;
-            border: 1px solid rgba(237, 222, 222, 0.7);
-            box-shadow: 0 6px 24px -4px rgba(105, 23, 26, 0.05);
-        }
-
-        /* Scroll reveal transition */
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: opacity, transform;
-        }
-        .reveal-on-scroll.is-revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* FAQ smooth height */
-        .faq-answer {
-            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease;
-        }
-    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{
+  linen:'#FAF6F2',sand:'#F3EAE1',ink:'#2A1416',marsala:{DEFAULT:'#69171A',dark:'#2E0608',mid:'#7E252B'},blush:'#EDDEDE',rose:'#D29797'
+},fontFamily:{serif:['"Cormorant Garamond"','serif'],sans:['"Plus Jakarta Sans"','sans-serif']}}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{background:#FAF6F2;color:#2A1416;font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+.hair{border-color:rgba(105,23,26,.16)}
+.h-display{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.04;letter-spacing:-.01em}
+.h-display em{font-style:italic;color:#69171A}
+.on-dark .h-display em,.h-display.on-dark em{color:#D29797}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 34px;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid #69171A;background:#69171A;color:#FAF6F2;transition:background .35s,color .35s,border-color .35s}
+.btn:hover{background:transparent;color:#69171A}
+.btn-light{background:#FAF6F2;color:#69171A;border-color:#FAF6F2}
+.btn-light:hover{background:transparent;color:#FAF6F2}
+.btn-ghost{background:transparent;color:#FAF6F2;border-color:rgba(250,246,242,.5)}
+.btn-ghost:hover{background:#FAF6F2;color:#69171A}
+.link{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:4px}
+/* nav */
+#nav{transition:background .4s,box-shadow .4s,color .4s}
+#nav.solid{background:rgba(250,246,242,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(105,23,26,.12);color:#2A1416}
+#nav.solid .nav-cta{border-color:#69171A;color:#69171A}
+/* galeria masonry */
+@media(min-width:640px){@media(min-width:1024px){@media(min-width:1024px){.g-img{transition:transform 1.2s cubic-bezier(.16,1,.3,1)}figure:hover .g-img{transform:scale(1.035)}
+/* faq */
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details .plus{transition:transform .3s}
+details[open] .plus{transform:rotate(45deg)}
+/* reveal (só com JS) */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+::selection{background:#EDDEDE;color:#2E0608}
+</style>
 </head>
-<body class="bg-warmOffWhite-100 text-marsala-950 font-sans antialiased selection:bg-blush-200 selection:text-marsala-900 pb-24 md:pb-0 overflow-x-hidden">
+<body class="pb-20 md:pb-0">
 
-    <!-- ================================================================= -->
-    <!-- [TOPBAR - IDENTIDADE MARSALA] -->
-    <!-- ================================================================= -->
-    <div class="bg-marsala-700 text-warmOffWhite-100 py-2.5 px-4 text-xs text-center border-b border-marsala-800 shadow-sm">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 font-medium">
-            <span class="flex items-center gap-1.5 text-blush-200">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terracotta-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-terracotta-500"></span>
-                </span>
-                <span>Fotografia Documental de Parto &bull; São Paulo - SP</span>
-            </span>
-            <span class="hidden sm:inline text-marsala-400">•</span>
-            <span class="text-warmOffWhite-200">Nascer com respeito importa!</span>
-            <a href="https://wa.me/5511960897445" target="_blank" class="text-blush-200 font-bold underline underline-offset-4 hover:text-white transition-colors ml-1">
-                Consultar Vaga para DPP &rarr;
-            </a>
-        </div>
+<!-- NAV -->
+<nav id="nav" class="fixed top-0 inset-x-0 z-50 text-linen">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="#topo" aria-label="Francielly Fragnan — Parto em Foco" class="leading-none"><span class="block font-serif text-[26px] tracking-tight">Francielly Fragnan</span><span class="block eyebrow !text-[9px] !tracking-[.34em] mt-1.5 opacity-80">Parto em Foco</span></a>
+    <div class="hidden lg:flex items-center gap-10 eyebrow !tracking-[.22em]">
+      <a href="#galeria" class="hover:opacity-60 transition-opacity">Galeria</a>
+      <a href="#sobre" class="hover:opacity-60 transition-opacity">Sobre</a>
+      <a href="#processo" class="hover:opacity-60 transition-opacity">Como funciona</a>
+      <a href="#colecoes" class="hover:opacity-60 transition-opacity">Coleções</a>
+      <a href="#faq" class="hover:opacity-60 transition-opacity">Dúvidas</a>
     </div>
-
-    <!-- ================================================================= -->
-    <!-- [NAVBAR - COM LOGO OFICIAL DO CANVA] -->
-    <!-- ================================================================= -->
-    <nav class="sticky top-0 z-50 glass-brand border-b border-roseWood-200/50 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
-            <!-- Logo Oficial Francielly Fragnan | Parto em Foco -->
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="assets/logo.png" alt="Francielly Fragnan — Parto em Foco" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-            </a>
-            
-            <div class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider text-marsala-900/80 uppercase">
-                <a href="#mural" class="hover:text-terracotta-600 transition-colors">Galeria</a>
-                <a href="#proposito" class="hover:text-terracotta-600 transition-colors">O Pai no Parto</a>
-                <a href="#sobre" class="hover:text-terracotta-600 transition-colors">Sobre a Fran</a>
-                <a href="#processo" class="hover:text-terracotta-600 transition-colors">Como Funciona</a>
-                <a href="#colecoes" class="hover:text-terracotta-600 transition-colors">Coleções</a>
-                <a href="#faq" class="hover:text-terracotta-600 transition-colors">Dúvidas</a>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <a href="https://instagram.com/francielly.fragnan" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-marsala-800 hover:text-terracotta-600 px-3 py-2 rounded-full border border-roseWood-300 bg-white/60 transition-colors">
-                    <i data-lucide="instagram" class="w-4 h-4 text-marsala-700"></i>
-                    <span>@francielly.fragnan</span>
-                </a>
-
-                <a href="https://wa.me/5511960897445" target="_blank" class="inline-flex items-center gap-2 bg-marsala-700 hover:bg-marsala-800 text-warmOffWhite-100 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-                    <i data-lucide="message-circle" class="w-4 h-4 text-blush-200"></i>
-                    <span>Verificar Data</span>
-                </a>
-            </div>
-
-        </div>
-    </nav>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 1: HERO SECTION COM IDENTIDADE VISUAL ADAPTADA] -->
-    <!-- ================================================================= -->
-    <header class="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-gradient-to-b from-warmOffWhite-100 via-blush-50/40 to-warmOffWhite-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                
-                <!-- Left Column (Copy de Alta Conversão) -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blush-200/80 border border-roseWood-300 text-marsala-800 text-xs font-semibold tracking-wide">
-                        <i data-lucide="heart" class="w-3.5 h-3.5 text-marsala-700 fill-marsala-700"></i>
-                        <span>Especialista em registrar sentimentos reais &bull; São Paulo</span>
-                    </div>
-
-                    <h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] text-marsala-950">
-                        O dia mais transformador da sua vida merece ser lembrado com a <span class="italic font-serif text-terracotta-600">verdade e o amor</span> com que foi vivido.
-                    </h1>
-
-                    <p class="text-marsala-900/85 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
-                        O primeiro olhar, o alívio do choro, o toque pele com pele e a lágrima que escorre sem aviso. Registros sensíveis, silenciosos e eternos para que você reviva cada segundo do nascimento do seu bebê exatamente como sentiu no coração.
-                    </p>
-
-                    <!-- Trust Cards Grid com paleta Marsala & Blush -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left">
-                        <div class="p-4 rounded-2xl card-brand">
-                            <div class="flex items-center gap-2 text-terracotta-600 mb-1">
-                                <i data-lucide="clock" class="w-4 h-4 text-marsala-700"></i>
-                                <span class="text-xs font-bold uppercase tracking-wider text-marsala-900">Sobreaviso 24/7</span>
-                            </div>
-                            <p class="text-[11px] text-marsala-800/80">Alerta total a partir de 37 semanas até o parto.</p>
-                        </div>
-
-                        <div class="p-4 rounded-2xl card-brand">
-                            <div class="flex items-center gap-2 text-terracotta-600 mb-1">
-                                <i data-lucide="building" class="w-4 h-4 text-marsala-700"></i>
-                                <span class="text-xs font-bold uppercase tracking-wider text-marsala-900">Credenciamento</span>
-                            </div>
-                            <p class="text-[11px] text-marsala-800/80">Autorizada nas principais maternidades de SP.</p>
-                        </div>
-
-                        <div class="p-4 rounded-2xl card-brand">
-                            <div class="flex items-center gap-2 text-terracotta-600 mb-1">
-                                <i data-lucide="shield" class="w-4 h-4 text-marsala-700"></i>
-                                <span class="text-xs font-bold uppercase tracking-wider text-marsala-900">Silêncio & Respeito</span>
-                            </div>
-                            <p class="text-[11px] text-marsala-800/80">Sem poses forçadas e sem flash nos olhos do bebê.</p>
-                        </div>
-                    </div>
-
-                    <!-- CTA Action Box -->
-                    <div class="pt-4 space-y-3">
-                        <a href="https://wa.me/5511960897445" target="_blank" class="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-marsala-700 hover:bg-marsala-800 text-warmOffWhite-100 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg tracking-wide shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                            <i data-lucide="message-circle" class="w-6 h-6 text-blush-200"></i>
-                            <span>CONSULTAR DISPONIBILIDADE PARA MINHA DPP</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5 hidden sm:inline"></i>
-                        </a>
-
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 text-xs text-marsala-800/80">
-                            <span>🔒 Vagas estritamente limitadas por mês para dedicação total.</span>
-                            <span class="hidden sm:inline text-roseWood-300">•</span>
-                            <span class="text-terracotta-700 font-semibold">Atendimento acolhedor e direto pelo WhatsApp.</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Right Column (Hero Photo Frame com Borda Blush e Sombra Marsala) -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        
-                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-blush-100">
-                            <img src="assets/IMG_0215.jpg" alt="Fotografia de parto documental — Toque e conexão real" class="w-full h-[450px] sm:h-[520px] object-cover object-center transform hover:scale-105 transition-transform duration-700">
-                            
-                            <!-- Floating Tag Badge -->
-                            <div class="absolute bottom-6 left-6 right-6 glass-brand p-4 rounded-2xl shadow-lg border border-roseWood-200">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="text-sm font-editorial font-bold text-marsala-900">Primeiro contato pele com pele</h4>
-                                        <p class="text-xs text-terracotta-600 font-medium">São Paulo &bull; Parto Humanizado</p>
-                                    </div>
-                                    <span class="text-xs bg-blush-200 text-marsala-800 font-bold px-3 py-1 rounded-full border border-roseWood-300">Real & Puro</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 2: TICKER INFINITO DE MATERNIDADES CREDENCIADAS] -->
-    <!-- ================================================================= -->
-    <section class="py-6 bg-blush-200/50 border-t border-b border-roseWood-300/60 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-3 text-center">
-            <span class="text-[11px] font-bold tracking-[0.2em] text-marsala-800 uppercase">
-                Credenciamento e Autorização Hospitalar Ativa:
-            </span>
-        </div>
-
-        <div class="relative w-full overflow-hidden">
-            <div class="animate-marquee flex items-center gap-8 sm:gap-12 text-sm sm:text-base font-serif italic text-marsala-900">
-                <span>São Luiz Star</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>São Luiz Anália Franco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital e Maternidade Santa Joana</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Pro Matre Paulista</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Santa Maria</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Salvalus</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Vitória Anália Franco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Sepaco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Israelita Albert Einstein</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>São Luiz Guarulhos</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-
-                <!-- Repetição contínua para loop sem emendas -->
-                <span>São Luiz Star</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>São Luiz Anália Franco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital e Maternidade Santa Joana</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Pro Matre Paulista</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Santa Maria</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Salvalus</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Vitória Anália Franco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Sepaco</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>Hospital Israelita Albert Einstein</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-                <span>São Luiz Guarulhos</span>
-                <span class="text-terracotta-600 font-sans not-italic text-xs">&bull;</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 3: MURAL DE SENTIMENTOS REAIS - MOSAICO ESTILO INSTAGRAM] -->
-    <!-- ================================================================= -->
-    <section id="mural" class="py-20 sm:py-28 bg-warmOffWhite-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 sm:mb-18">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-blush-200 border border-roseWood-300">
-                    Galeria Documental
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    Sentimentos reais não precisam de pose.<br>
-                    <span class="italic font-serif text-terracotta-600">Eles só precisam ser sentidos.</span>
-                </h2>
-                <p class="text-marsala-900/80 text-sm sm:text-base md:text-lg leading-relaxed">
-                    Cada nascimento tem sua própria pulsação. Aqui, não existe "olhe para a câmera" ou sorrisos ensaiados. Existe a força ancestral da mulher, o apoio incondicional do parceiro e a mágica silenciosa do primeiro suspiro no mundo.
-                </p>
-            </div>
-
-            <!-- Mosaic Photo Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-                
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_9841.jpg" alt="Primeiro toque do bebê no nascimento" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">O primeiro abraço de alívio</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_1009.jpg" alt="A emoção do pai na sala de parto" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">A lágrima do pai ao ver o filho</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_7053.JPG" alt="Pezinho do recém-nascido e detalhes" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">Detalhes que o tempo apaga</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_2192.jpg" alt="Família unida celebrando a vida" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">O nascimento de uma nova família</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_2768.jpg" alt="Força e apoio no trabalho de parto" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">A força ancestral da mulher</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_4750.jpg" alt="Olhar entre mãe e recém-nascido" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">O primeiro reconhecimento</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_9070.jpg" alt="O corte do cordão umbilical" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">O corte do cordão umbilical</span>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl bg-blush-100 aspect-[4/5] shadow-md">
-                    <img src="assets/IMG_7169.jpg" alt="Aconchego e pele com pele na maternidade" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-marsala-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white text-xs font-medium">Golden hour em São Paulo</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-10 text-center">
-                <a href="https://instagram.com/francielly.fragnan" target="_blank" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-marsala-700 hover:text-terracotta-600 transition-colors">
-                    <span>Ver mais histórias e relatos reais no Instagram (@francielly.fragnan)</span>
-                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 4: O PAI NO PARTO] -->
-    <!-- ================================================================= -->
-    <section id="proposito" class="py-20 sm:py-28 bg-blush-100/50 border-t border-b border-roseWood-300/50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="text-center space-y-4 max-w-3xl mx-auto mb-14">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-white border border-roseWood-300">
-                    Uma Decisão Irreversível
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    O pai não pode ser o fotógrafo do parto.<br>
-                    <span class="italic font-serif text-terracotta-600">Ele precisa ser o pai.</span>
-                </h2>
-                <p class="text-marsala-900/80 text-sm sm:text-base md:text-lg leading-relaxed">
-                    No momento mais intenso e sagrado da chegada do seu filho, o que você mais vai precisar é da mão dele segurando a sua, da respiração compassada e da presença dele de corpo e alma ao seu lado.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                
-                <div class="p-8 rounded-3xl bg-white border border-roseWood-300/60 shadow-lg space-y-5">
-                    <h3 class="font-editorial text-2xl font-bold text-marsala-900 flex items-center gap-2">
-                        <i data-lucide="x-circle" class="w-6 h-6 text-roseWood-400"></i>
-                        <span>Quando o celular vira o fotógrafo:</span>
-                    </h3>
-                    <ul class="space-y-4 text-xs sm:text-sm text-marsala-900/80">
-                        <li class="flex items-start gap-3">
-                            <span class="text-marsala-700 font-bold mt-0.5">&bull;</span>
-                            <span><strong>O pai não vive o momento:</strong> Preocupado com foco, bateria e ângulo, ele perde a conexão profunda com você e o primeiro olhar do bebê.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-marsala-700 font-bold mt-0.5">&bull;</span>
-                            <span><strong>A memória é uma névoa:</strong> Pela enxurrada de hormônios, a mãe esquece mais de 50% dos detalhes visuais do parto em poucas horas.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-marsala-700 font-bold mt-0.5">&bull;</span>
-                            <span><strong>Fotos escuras e tremidas:</strong> Salas de cirurgia e parto têm luz baixa. Celulares criam granulações e deixam o pai de fora de tudo.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-8 rounded-3xl bg-marsala-700 text-warmOffWhite-100 shadow-2xl space-y-5 border border-marsala-800">
-                    <h3 class="font-editorial text-2xl font-bold text-blush-200 flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-6 h-6 text-blush-200"></i>
-                        <span>Com o olhar documental profissional:</span>
-                    </h3>
-                    <ul class="space-y-4 text-xs sm:text-sm text-warmOffWhite-200">
-                        <li class="flex items-start gap-3">
-                            <span class="text-blush-300 font-bold mt-0.5">&bull;</span>
-                            <span><strong>Presença total e genuína:</strong> O parceiro segura sua mão, chora, apoia, corta o cordão e aparece no registro com a verdade que merece.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blush-300 font-bold mt-0.5">&bull;</span>
-                            <span><strong>A maestria da luz e do respeito:</strong> Equipamentos de alta tecnologia que captam cada lágrima sem ligar flash nos olhos do recém-nascido.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blush-300 font-bold mt-0.5">&bull;</span>
-                            <span><strong>Herança viva de família:</strong> Daqui a 20 ou 30 anos, seu filho verá exatamente como foi esperado e amado desde o primeiro segundo.</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="mt-12 text-center max-w-3xl mx-auto p-6 rounded-2xl glass-brand border border-roseWood-300">
-                <p class="font-serif italic text-base sm:text-lg text-marsala-900 leading-relaxed">
-                    "Quando você olhar para essas fotos no futuro, não verá apenas imagens técnicas. Você sentirá o calor da pele, o cheiro do seu bebê e o alívio de ter vivido tudo aquilo com amor e respeito."
-                </p>
-                <span class="block mt-2 text-xs font-bold uppercase tracking-widest text-terracotta-600">— Francielly Fragnan &bull; Parto em Foco</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 5: SOBRE FRANCIELLY FRAGNAN] -->
-    <!-- ================================================================= -->
-    <section id="sobre" class="py-20 sm:py-28 bg-warmOffWhite-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-sm lg:max-w-none">
-                        
-                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-blush-100">
-                            <img src="assets/perfil-fran.jpg" alt="Francielly Fragnan — Fotógrafa de Parto" class="w-full h-[450px] object-cover object-top">
-                            
-                            <div class="p-5 bg-white space-y-2 text-center">
-                                <h4 class="font-editorial text-2xl font-bold text-marsala-900">Francielly Fragnan</h4>
-                                <p class="text-xs text-terracotta-600 font-semibold uppercase tracking-wider">Parto em Foco &bull; Sentimentos Reais</p>
-                                <div class="flex items-center justify-center gap-4 pt-2 text-xs text-marsala-800">
-                                    <span class="font-bold">27k seguidores</span>
-                                    <span>&bull;</span>
-                                    <span>Centenas de partos acolhidos em SP</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    
-                    <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-blush-200 border border-roseWood-300">
-                        Por Trás das Lentes
-                    </span>
-
-                    <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                        Nascer com respeito importa.<br>
-                        <span class="italic font-serif text-terracotta-600">E essa é a minha missão de vida.</span>
-                    </h2>
-
-                    <p class="text-marsala-900/80 text-sm sm:text-base md:text-lg leading-relaxed">
-                        Sou mãe, fotógrafa documental e apaixonada pela intensidade do milagre do nascimento. Acompanho famílias nas maiores maternidades de São Paulo com uma convicção firme: <strong>a forma como um bebê chega ao mundo reverbera por toda a sua existência.</strong>
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-left">
-                        <div class="p-5 rounded-2xl card-brand">
-                            <div class="w-10 h-10 rounded-xl bg-blush-200 text-marsala-700 flex items-center justify-center mb-3">
-                                <i data-lucide="feather" class="w-5 h-5"></i>
-                            </div>
-                            <h4 class="text-sm font-bold text-marsala-900 mb-1">Presença Invisível</h4>
-                            <p class="text-xs text-marsala-800/80">Silenciosa em sala cirúrgica ou parto normal, sem atrapalhar a equipe.</p>
-                        </div>
-
-                        <div class="p-5 rounded-2xl card-brand">
-                            <div class="w-10 h-10 rounded-xl bg-blush-200 text-marsala-700 flex items-center justify-center mb-3">
-                                <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-                            </div>
-                            <h4 class="text-sm font-bold text-marsala-900 mb-1">Olhar de Mãe</h4>
-                            <p class="text-xs text-marsala-800/80">Compreensão real das dores, dos medos e da comoção de cada segundo.</p>
-                        </div>
-
-                        <div class="p-5 rounded-2xl card-brand">
-                            <div class="w-10 h-10 rounded-xl bg-blush-200 text-marsala-700 flex items-center justify-center mb-3">
-                                <i data-lucide="award" class="w-5 h-5"></i>
-                            </div>
-                            <h4 class="text-sm font-bold text-marsala-900 mb-1">Rigor Hospitalar</h4>
-                            <p class="text-xs text-marsala-800/80">Credenciamento e cumprimento rigoroso das normas das maternidades.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 6: COMO FUNCIONA O ACOMPANHAMENTO DO PARTO] -->
-    <!-- ================================================================= -->
-    <section id="processo" class="py-20 sm:py-28 bg-blush-100/40 border-t border-b border-roseWood-300/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-white border border-roseWood-300">
-                    Segurança do Início ao Fim
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    Como funciona a cobertura fotográfica do nascimento?
-                </h2>
-                <p class="text-marsala-900/80 text-sm sm:text-base md:text-lg">
-                    Um protocolo pensado para que você sinta paz, tranquilidade e a certeza de que cada detalhe está sendo cuidado.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="p-6 rounded-3xl card-brand space-y-3">
-                    <div class="w-10 h-10 rounded-full bg-marsala-700 text-warmOffWhite-100 flex items-center justify-center font-bold text-sm">1</div>
-                    <h3 class="text-base font-bold text-marsala-900">Alinhamento & Plano de Parto</h3>
-                    <p class="text-xs text-marsala-800/80 leading-relaxed">
-                        Conversamos sobre o hospital escolhido, suas expectativas, desejos de privacidade e orientações da sua equipe médica.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-3xl card-brand space-y-3">
-                    <div class="w-10 h-10 rounded-full bg-marsala-700 text-warmOffWhite-100 flex items-center justify-center font-bold text-sm">2</div>
-                    <h3 class="text-base font-bold text-marsala-900">Sobreaviso 24/7 (37 semanas)</h3>
-                    <p class="text-xs text-marsala-800/80 leading-relaxed">
-                        Fico em prontidão ininterrupta. Seja às 14h de uma terça ou às 3h da madrugada de um feriado, estou pronta para ir à maternidade.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-3xl card-brand space-y-3">
-                    <div class="w-10 h-10 rounded-full bg-marsala-700 text-warmOffWhite-100 flex items-center justify-center font-bold text-sm">3</div>
-                    <h3 class="text-base font-bold text-marsala-900">O Nascimento & Golden Hour</h3>
-                    <p class="text-xs text-marsala-800/80 leading-relaxed">
-                        Acompanho o trabalho de parto, o nascimento sublime, as primeiras avaliações do pediatra e o contato pele com pele sem pressa.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-3xl card-brand space-y-3">
-                    <div class="w-10 h-10 rounded-full bg-marsala-700 text-warmOffWhite-100 flex items-center justify-center font-bold text-sm">4</div>
-                    <h3 class="text-base font-bold text-marsala-900">Prévia Rápida em 48h</h3>
-                    <p class="text-xs text-marsala-800/80 leading-relaxed">
-                        Você recebe uma prévia emocionante tratada com carinho para anunciar a chegada aos familiares e celebrar nas redes sociais.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 7: NOSSAS EXPERIÊNCIAS & COLEÇÕES] -->
-    <!-- ================================================================= -->
-    <section id="colecoes" class="py-20 sm:py-28 bg-warmOffWhite-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-blush-200 border border-roseWood-300">
-                    Coleções de Memórias
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    Escolha como você deseja eternizar essa história
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
-                <!-- Package 1: Nascimento -->
-                <div class="p-8 rounded-3xl card-brand relative flex flex-col justify-between border-2 border-roseWood-300 hover:border-marsala-700 transition-all shadow-xl">
-                    <div class="space-y-5">
-                        <span class="text-xs font-bold uppercase tracking-wider text-marsala-700 bg-blush-200 px-3 py-1 rounded-full border border-roseWood-300">Mais Solicitado</span>
-                        <h3 class="font-editorial text-3xl font-bold text-marsala-900">Coleção Nascimento</h3>
-                        <p class="text-xs text-marsala-800/80 leading-relaxed">O registro definitivo e completo do nascimento do seu bebê.</p>
-                        
-                        <ul class="space-y-3 text-xs sm:text-sm text-marsala-900/90 border-t border-roseWood-200 pt-5">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Cobertura completa (Parto Normal ou Cesárea)</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Sobreaviso 24/7 a partir de 37 semanas</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Registro da Golden Hour (pele com pele)</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Prévia emocionante em até 48 horas</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Galeria privada em altíssima resolução</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-8">
-                        <a href="https://wa.me/5511960897445" target="_blank" class="block w-full py-4 text-center rounded-2xl bg-marsala-700 hover:bg-marsala-800 text-warmOffWhite-100 font-bold text-xs sm:text-sm tracking-wide shadow-md transition-all">
-                            Consultar Vaga para meu Mês
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Package 2: Espera -->
-                <div class="p-8 rounded-3xl card-brand relative flex flex-col justify-between border-2 border-roseWood-300 hover:border-marsala-700 transition-all shadow-xl">
-                    <div class="space-y-5">
-                        <span class="text-xs font-bold uppercase tracking-wider text-marsala-800 bg-blush-100 px-3 py-1 rounded-full">Gestantes</span>
-                        <h3 class="font-editorial text-3xl font-bold text-marsala-900">Coleção Espera</h3>
-                        <p class="text-xs text-marsala-800/80 leading-relaxed">A poesia e a conexão da gravidez de forma leve e sem clichês.</p>
-                        
-                        <ul class="space-y-3 text-xs sm:text-sm text-marsala-900/90 border-t border-roseWood-200 pt-5">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Ensaio documental em casa ou ao ar livre</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Direção espontânea e acolhedora</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Foco na conexão do casal e irmãos</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Fotos com a identidade real de vocês</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-8">
-                        <a href="https://wa.me/5511960897445" target="_blank" class="block w-full py-4 text-center rounded-2xl bg-blush-200 hover:bg-blush-300 text-marsala-900 font-bold text-xs sm:text-sm tracking-wide transition-all border border-roseWood-300">
-                            Consultar Ensaio Gestante
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Package 3: Completa -->
-                <div class="p-8 rounded-3xl card-brand relative flex flex-col justify-between border-2 border-marsala-700 hover:border-marsala-800 transition-all shadow-2xl bg-gradient-to-b from-white via-blush-50 to-blush-200/40">
-                    <div class="space-y-5">
-                        <span class="text-xs font-bold uppercase tracking-wider text-marsala-700 bg-blush-200 px-3 py-1 rounded-full border border-roseWood-300 font-bold">Experiência Total</span>
-                        <h3 class="font-editorial text-3xl font-bold text-marsala-900">Coleção Boas-Vindas</h3>
-                        <p class="text-xs text-marsala-800/80 leading-relaxed">A jornada completa: da doce espera aos primeiros dias com o bebê.</p>
-                        
-                        <ul class="space-y-3 text-xs sm:text-sm text-marsala-900/90 border-t border-roseWood-200 pt-5">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Ensaio Gestante intimista</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Cobertura de Parto com sobreaviso 24/7</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Mini-ensaio Fresh 48 na maternidade</span></li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-marsala-700"></i><span>Prioridade de agenda & prévia expressa</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-8">
-                        <a href="https://wa.me/5511960897445" target="_blank" class="block w-full py-4 text-center rounded-2xl bg-marsala-700 hover:bg-marsala-800 text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg transition-all">
-                            Quero a Experiência Completa
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 8: DEPOIMENTOS DE FAMÍLIAS REAIS] -->
-    <!-- ================================================================= -->
-    <section class="py-20 sm:py-28 bg-blush-100/50 border-t border-b border-roseWood-300/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-white border border-roseWood-300">
-                    Histórias de Amor Real
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    O que dizem as mães que confiaram esse momento à Fran
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                
-                <div class="p-8 rounded-3xl card-brand space-y-4 flex flex-col justify-between shadow-lg">
-                    <div class="space-y-3">
-                        <div class="flex text-terracotta-600 gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                        </div>
-                        <p class="italic text-xs sm:text-sm text-marsala-900/80 leading-relaxed font-light">
-                            "A Fran foi um anjo no meu parto no São Luiz Star. Nem percebemos que ela estava fotografando, de tão discreta. Quando as fotos chegaram, chorei tudo de novo. Ela pegou o olhar do meu marido que eu nem tinha conseguido ver na hora!"
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-roseWood-200">
-                        <h5 class="text-sm font-bold text-marsala-900">Camila N. (Mãe do Theo)</h5>
-                        <span class="text-xs text-terracotta-600 font-medium">São Luiz Star &bull; Parto Normal</span>
-                    </div>
-                </div>
-
-                <div class="p-8 rounded-3xl card-brand space-y-4 flex flex-col justify-between shadow-lg">
-                    <div class="space-y-3">
-                        <div class="flex text-terracotta-600 gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                        </div>
-                        <p class="italic text-xs sm:text-sm text-marsala-900/80 leading-relaxed font-light">
-                            "Eu achava que foto de celular bastava, mas meu marido me convenceu a chamar a Fran. Foi a melhor decisão de todo o nosso enxoval. Ver as fotos do primeiro minuto da nossa filha não tem preço no mundo."
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-roseWood-200">
-                        <h5 class="text-sm font-bold text-marsala-900">Mariana S. (Mãe da Alice)</h5>
-                        <span class="text-xs text-terracotta-600 font-medium">Pro Matre &bull; Cesárea Humanizada</span>
-                    </div>
-                </div>
-
-                <div class="p-8 rounded-3xl card-brand space-y-4 flex flex-col justify-between shadow-lg">
-                    <div class="space-y-3">
-                        <div class="flex text-terracotta-600 gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-terracotta-600"></i>
-                        </div>
-                        <p class="italic text-xs sm:text-sm text-marsala-900/80 leading-relaxed font-light">
-                            "Excelente profissional, credenciada e super querida pela equipe médica no Santa Joana. Fiquei muito tranquila sabendo que ela estava lá registrando tudo com delicadeza e respeito absoluto."
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-roseWood-200">
-                        <h5 class="text-sm font-bold text-marsala-900">Juliana M. (Mãe do Noah)</h5>
-                        <span class="text-xs text-terracotta-600 font-medium">Santa Joana &bull; Parto Adequado</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 9: FAQ - DÚVIDAS FREQUENTES] -->
-    <!-- ================================================================= -->
-    <section id="faq" class="py-20 sm:py-28 bg-warmOffWhite-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-            
-            <div class="text-center space-y-4 mb-16">
-                <span class="text-xs uppercase tracking-widest text-marsala-700 font-bold px-4 py-1.5 rounded-full bg-blush-200 border border-roseWood-300">
-                    Dúvidas Frequentes
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-normal text-marsala-950 leading-tight">
-                    Perguntas que toda gestante faz antes de contratar
-                </h2>
-            </div>
-
-            <!-- FAQ Accordion -->
-            <div class="space-y-4">
-                
-                <div class="rounded-2xl card-brand overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full p-5 sm:p-6 text-left flex items-center justify-between text-marsala-900 font-bold text-sm sm:text-base hover:text-terracotta-600 transition-colors">
-                        <span>1. E se meu bebê nascer de madrugada, feriado ou fim de semana?</span>
-                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-marsala-700 transition-transform duration-300 shrink-0 ml-2"></i>
-                    </button>
-                    <div class="faq-answer max-h-0 overflow-hidden px-5 sm:px-6 text-marsala-900/80 text-xs sm:text-sm leading-relaxed border-t border-transparent">
-                        <div class="pb-6 pt-2">
-                            O sobreaviso contratado a partir da 37ª semana é <strong>ininterrupto (24 horas por dia, 7 dias por semana)</strong>. Os bebês escolhem a hora deles — e eu estou 100% pronta para sair a qualquer hora do dia ou da madrugada para acompanhar você.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl card-brand overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full p-5 sm:p-6 text-left flex items-center justify-between text-marsala-900 font-bold text-sm sm:text-base hover:text-terracotta-600 transition-colors">
-                        <span>2. Você fotografa tanto parto normal quanto cesárea?</span>
-                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-marsala-700 transition-transform duration-300 shrink-0 ml-2"></i>
-                    </button>
-                    <div class="faq-answer max-h-0 overflow-hidden px-5 sm:px-6 text-marsala-900/80 text-xs sm:text-sm leading-relaxed border-t border-transparent">
-                        <div class="pb-6 pt-2">
-                            <strong>Sim!</strong> Atendo com o mesmo amor e dedicação tanto partos normais (domiciliares ou hospitalares) quanto cesáreas planejadas ou intraparto. Em cesáreas, tenho autorização e treinamento para atuar devidamente paramentada dentro do centro cirúrgico.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl card-brand overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full p-5 sm:p-6 text-left flex items-center justify-between text-marsala-900 font-bold text-sm sm:text-base hover:text-terracotta-600 transition-colors">
-                        <span>3. Preciso pedir autorização para a maternidade?</span>
-                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-marsala-700 transition-transform duration-300 shrink-0 ml-2"></i>
-                    </button>
-                    <div class="faq-answer max-h-0 overflow-hidden px-5 sm:px-6 text-marsala-900/80 text-xs sm:text-sm leading-relaxed border-t border-transparent">
-                        <div class="pb-6 pt-2">
-                            Eu já possuo <strong>credenciamento ativo e documentação regularizada nas principais maternidades de São Paulo</strong> (São Luiz Star, Pro Matre, Santa Joana, Einstein, Sepaco, etc.). Nossa equipe orienta você em todo o trâmite hospitalar para que você não tenha nenhuma preocupação burocrática.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl card-brand overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full p-5 sm:p-6 text-left flex items-center justify-between text-marsala-900 font-bold text-sm sm:text-base hover:text-terracotta-600 transition-colors">
-                        <span>4. Você usa flash no bebê recém-nascido?</span>
-                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-marsala-700 transition-transform duration-300 shrink-0 ml-2"></i>
-                    </button>
-                    <div class="faq-answer max-h-0 overflow-hidden px-5 sm:px-6 text-marsala-900/80 text-xs sm:text-sm leading-relaxed border-t border-transparent">
-                        <div class="pb-6 pt-2">
-                            <strong>Nunca de forma invasiva.</strong> Utilizo lentes claras e câmeras profissionais de altíssima sensibilidade à luz, feitas especialmente para captar a atmosfera suave e intimista da sala de parto sem assustar o bebê nem incomodar a equipe médica.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl card-brand overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full p-5 sm:p-6 text-left flex items-center justify-between text-marsala-900 font-bold text-sm sm:text-base hover:text-terracotta-600 transition-colors">
-                        <span>5. Com quantas semanas de gestação devo fechar o contrato?</span>
-                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-marsala-700 transition-transform duration-300 shrink-0 ml-2"></i>
-                    </button>
-                    <div class="faq-answer max-h-0 overflow-hidden px-5 sm:px-6 text-marsala-900/80 text-xs sm:text-sm leading-relaxed border-t border-transparent">
-                        <div class="pb-6 pt-2">
-                            Como atendo um número estritamente limitado de partos por mês para garantir que nunca haja sobreposição de datas de sobreaviso, <strong>o ideal é reservar entre a 16ª e a 28ª semana de gestação</strong>.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- [DOBRA 10: RODAPÉ & CONTATO COM LOGO OFICIAL] -->
-    <!-- ================================================================= -->
-    <footer class="bg-marsala-950 text-warmOffWhite-200 py-16 text-xs border-t border-marsala-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-center sm:text-left">
-            
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-3">
-                    <img src="assets/logo.png" alt="Francielly Fragnan — Parto em Foco" class="h-10 w-auto brightness-200 contrast-125">
-                    <div>
-                        <span class="font-editorial text-2xl font-bold text-white">Francielly Fragnan</span>
-                        <p class="text-xs text-roseWood-300 mt-0.5">Parto em Foco &bull; Nascer com respeito importa!</p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap justify-center gap-6 text-warmOffWhite-300 font-medium">
-                    <a href="#mural" class="hover:text-white transition-colors">Galeria</a>
-                    <a href="#proposito" class="hover:text-white transition-colors">O Pai no Parto</a>
-                    <a href="#sobre" class="hover:text-white transition-colors">Sobre a Fran</a>
-                    <a href="#colecoes" class="hover:text-white transition-colors">Coleções</a>
-                    <a href="https://instagram.com/francielly.fragnan" target="_blank" class="hover:text-blush-200 transition-colors flex items-center gap-1">
-                        <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
-                        <span>Instagram</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="p-6 rounded-2xl bg-marsala-900/70 border border-marsala-800 text-[11px] text-warmOffWhite-300 leading-relaxed text-center sm:text-left">
-                <p>
-                    <strong>Aviso de Respeito e Privacidade:</strong> Todas as fotografias exibidas neste site foram realizadas com autorização expressa e carinho das famílias retratadas. A preservação da intimidade e o nascimento seguro e respeitoso estão sempre em primeiro lugar.
-                </p>
-            </div>
-
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-warmOffWhite-400 pt-6 border-t border-marsala-900">
-                <p>&copy; 2026 Francielly Fragnan &bull; Parto em Foco. Todos os direitos reservados.</p>
-                <p>São Paulo - SP &bull; Atendimento em todas as maternidades de SP e Grande SP</p>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- ================================================================= -->
-    <!-- [STICKY MOBILE CTA BAR COM PALETA MARSALA] -->
-    <!-- ================================================================= -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-brand border-t border-roseWood-300/60 p-3 flex items-center justify-between gap-3 shadow-2xl backdrop-blur-xl">
-        <div class="text-left pl-1">
-            <span class="block text-[10px] uppercase tracking-wider text-marsala-700 font-bold">Vagas por Mês</span>
-            <span class="block text-xs font-semibold text-marsala-950">Consulte sua DPP</span>
-        </div>
-        <a href="https://wa.me/5511960897445" target="_blank" class="relative bg-marsala-700 hover:bg-marsala-800 text-white font-bold text-xs px-4 py-3 rounded-xl shadow-lg flex items-center gap-2 shrink-0">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terracotta-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-terracotta-500"></span>
-            </span>
-            <i data-lucide="message-circle" class="w-4 h-4 text-blush-200"></i>
-            <span>Verificar no WhatsApp</span>
-        </a>
+    <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="nav-cta eyebrow border border-linen/50 px-5 py-3 hover:bg-marsala hover:border-marsala hover:text-linen transition-colors">Reservar data</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="topo" class="relative min-h-[100svh] flex items-end bg-marsala-dark text-linen overflow-hidden">
+  <img src="assets/opt/img_7097.jpg" alt="Casal emocionado com o recém-nascido nos braços da mãe, na maternidade" class="absolute inset-0 w-full h-full object-cover object-[60%_35%]">
+  <div class="absolute inset-0 bg-gradient-to-t from-marsala-dark/90 via-marsala-dark/35 to-marsala-dark/25"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-marsala-dark/70 via-transparent to-transparent"></div>
+  <div class="relative max-w-[1280px] w-full mx-auto px-6 lg:px-10 pb-16 md:pb-24 pt-40">
+    <p class="eyebrow text-linen/85 mb-6">Parto em Foco · Fotografia documental · São Paulo</p>
+    <h1 class="h-display on-dark text-[44px] sm:text-6xl lg:text-[88px] max-w-4xl">O dia mais transformador da sua vida, lembrado com <em>verdade.</em></h1>
+    <p class="mt-8 max-w-xl text-base md:text-lg font-light leading-relaxed text-linen/85">O primeiro olhar, o alívio do choro, a lágrima que escorre sem aviso. Registros silenciosos e eternos, para você reviver o nascimento do seu bebê exatamente como sentiu.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+      <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn btn-light">Consultar minha data</a>
+      <a href="#galeria" class="btn btn-ghost">Ver o trabalho</a>
     </div>
+  </div>
+</header>
 
-    <!-- Initialize Lucide Icons & Interactive JS -->
-    <script>
-        // Init Lucide
-        lucide.createIcons();
+<!-- MATERNIDADES -->
+<section class="border-b hair bg-linen">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-8 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-10">
+    <span class="eyebrow text-marsala shrink-0">Maternidades de São Paulo</span>
+    <p class="font-serif italic text-lg md:text-xl text-ink/75 leading-relaxed">São Luiz Star <span class="text-rose mx-1.5">·</span> São Luiz Anália Franco <span class="text-rose mx-1.5">·</span> Santa Joana <span class="text-rose mx-1.5">·</span> Pro Matre Paulista <span class="text-rose mx-1.5">·</span> Santa Maria <span class="text-rose mx-1.5">·</span> Salvalus <span class="text-rose mx-1.5">·</span> Vitória Anália Franco <span class="text-rose mx-1.5">·</span> Sepaco <span class="text-rose mx-1.5">·</span> Albert Einstein <span class="text-rose mx-1.5">·</span> São Luiz Guarulhos</p>
+  </div>
+</section>
 
-        // FAQ Accordion Interaction
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const icon = button.querySelector('.faq-icon');
-                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+<!-- MANIFESTO -->
+<section class="py-24 md:py-36 bg-linen">
+  <div class="max-w-3xl mx-auto px-6 text-center rv">
+    <p class="eyebrow text-marsala mb-8">Olhar documental</p>
+    <h2 class="h-display text-4xl md:text-6xl">Sentimentos reais não precisam de pose. <em>Eles só precisam ser sentidos.</em></h2>
+    <p class="mt-10 text-base md:text-lg text-ink/70 font-light leading-relaxed">Cada nascimento tem a sua própria pulsação. Aqui não existe “olhe para a câmera” nem sorriso ensaiado. Existe a força da mulher, o apoio do parceiro e a magia silenciosa do primeiro suspiro no mundo.</p>
+  </div>
+</section>
 
-                // Close all others
-                document.querySelectorAll('.faq-answer').forEach(el => {
-                    el.style.maxHeight = '0px';
-                });
-                document.querySelectorAll('.faq-icon').forEach(ic => {
-                    ic.style.transform = 'rotate(0deg)';
-                });
+<!-- GALERIA -->
+<section id="galeria" class="pb-24 md:pb-36 bg-linen">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-3 gap-3.5 lg:gap-[18px] rv"><div class="flex flex-col gap-3.5 lg:gap-[18px]"><figure class=" overflow-hidden bg-blush"><img src="assets/opt/img_4750.jpg" alt="Recém-nascido olhando para a mãe, visto por entre os braços dela" loading="lazy" class="w-full h-auto block g-img"></figure><figure class=" overflow-hidden bg-blush"><img src="assets/opt/img_9841.jpg" alt="Mãe emocionada com o recém-nascido no peito, logo após o nascimento" loading="lazy" class="w-full h-auto block g-img"></figure><figure class="md:flex-1 md:min-h-[220px] relative aspect-[3/2] md:aspect-auto overflow-hidden bg-blush"><img src="assets/opt/img_7053.jpg" alt="Pezinhos do recém-nascido com a marca do carimbo" loading="lazy" class="md:absolute md:inset-0 md:h-full object-cover w-full h-auto block g-img" style="object-position:center 60%"></figure></div><div class="flex flex-col gap-3.5 lg:gap-[18px]"><figure class=" overflow-hidden bg-blush"><img src="assets/opt/img_0215.jpg" alt="Casal sorrindo com o bebê no colo" loading="lazy" class="w-full h-auto block g-img"></figure><figure class=" overflow-hidden bg-blush"><img src="assets/opt/img_2768.jpg" alt="Mãe sorrindo entre os dois gêmeos recém-nascidos" loading="lazy" class="w-full h-auto block g-img"></figure><figure class="md:flex-1 md:min-h-[220px] relative aspect-[3/2] md:aspect-auto overflow-hidden bg-blush"><img src="assets/opt/img_2192.jpg" alt="Irmão mais velho fazendo um coração com as mãos junto ao pai, através do vidro" loading="lazy" class="md:absolute md:inset-0 md:h-full object-cover w-full h-auto block g-img" style="object-position:40% center"></figure></div><div class="flex flex-col gap-3.5 lg:gap-[18px]"><figure class=" overflow-hidden bg-blush"><img src="assets/opt/img_8033.jpg" alt="Recém-nascido dormindo, envolto na manta" loading="lazy" class="w-full h-auto block g-img"></figure><figure class="md:flex-1 md:min-h-[220px] relative aspect-[3/2] md:aspect-auto overflow-hidden bg-blush"><img src="assets/opt/img_0689-2.jpg" alt="Olhar do recém-nascido para a mãe" loading="lazy" class="md:absolute md:inset-0 md:h-full object-cover w-full h-auto block g-img" style="object-position:center 30%"></figure></div></div>
+    <div class="mt-12 text-center">
+      <a href="https://instagram.com/francielly.fragnan" target="_blank" rel="noopener" class="link text-marsala hover:opacity-60 transition-opacity">Mais histórias no Instagram · @francielly.fragnan</a>
+    </div>
+  </div>
+</section>
 
-                // Toggle current
-                if (!isOpen) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
+<!-- O PAI NO PARTO -->
+<section class="bg-marsala-dark text-linen">
+  <div class="grid lg:grid-cols-2">
+    <div class="relative min-h-[420px] lg:min-h-[720px]">
+      <img src="assets/opt/img_7169.jpg" alt="Pai sorrindo ao segurar o pezinho do recém-nascido" class="absolute inset-0 w-full h-full object-cover object-[35%_center]" loading="lazy">
+    </div>
+    <div class="px-6 lg:px-16 xl:px-24 py-20 lg:py-28 flex flex-col justify-center rv">
+      <p class="eyebrow text-rose mb-6">O pai no parto</p>
+      <h2 class="h-display on-dark text-4xl md:text-6xl">O pai não pode ser o fotógrafo do parto. <em>Ele precisa ser o pai.</em></h2>
+      <p class="mt-8 text-base md:text-lg text-linen/75 font-light leading-relaxed">No momento mais intenso da chegada do seu filho, você vai precisar da mão dele segurando a sua, da respiração compassada e da presença dele, de corpo e alma.</p>
+      <dl class="mt-10 divide-y divide-linen/15 border-y border-linen/15">
+        <div class="py-5"><dt class="font-serif text-2xl mb-1">Presença inteira</dt><dd class="text-sm text-linen/70 font-light leading-relaxed">Ele segura a sua mão, chora, apoia, corta o cordão e aparece no registro com a verdade que merece.</dd></div>
+        <div class="py-5"><dt class="font-serif text-2xl mb-1">Luz e respeito</dt><dd class="text-sm text-linen/70 font-light leading-relaxed">Equipamento profissional que capta cada detalhe com luz baixa, sem flash nos olhos do recém-nascido.</dd></div>
+        <div class="py-5"><dt class="font-serif text-2xl mb-1">Herança de família</dt><dd class="text-sm text-linen/70 font-light leading-relaxed">Daqui a 20 ou 30 anos, seu filho verá como foi esperado e amado desde o primeiro segundo.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
 
-        // Intersection Observer for Smooth Section Scroll Transitions
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-        };
+<!-- SOBRE -->
+<section id="sobre" class="py-24 md:py-36 bg-linen">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+    <div class="lg:col-span-5 rv">
+      <img src="assets/opt/perfil-fran.jpg" alt="Francielly Fragnan segurando a câmera" class="w-full aspect-[4/5] object-cover object-[70%_center]" loading="lazy">
+    </div>
+    <div class="lg:col-span-7 rv">
+      <p class="eyebrow text-marsala mb-6">Por trás das lentes</p>
+      <h2 class="h-display text-4xl md:text-6xl">Nascer com respeito importa. <em>Essa é a minha missão.</em></h2>
+      <p class="mt-8 text-base md:text-lg text-ink/70 font-light leading-relaxed max-w-2xl">Sou mãe, fotógrafa documental e apaixonada pela intensidade do nascimento. Acompanho famílias nas maternidades de São Paulo com uma convicção: a forma como um bebê chega ao mundo reverbera por toda a sua existência.</p>
+      <div class="mt-12 grid sm:grid-cols-3 border-t hair">
+        <div class="py-6 sm:pr-6"><p class="font-serif text-2xl mb-1">Presença invisível</p><p class="text-sm text-ink/60 font-light leading-relaxed">Silenciosa na sala de parto ou no centro cirúrgico, sem atrapalhar a equipe.</p></div>
+        <div class="py-6 sm:px-6 border-t sm:border-t-0 sm:border-l hair"><p class="font-serif text-2xl mb-1">Olhar de mãe</p><p class="text-sm text-ink/60 font-light leading-relaxed">Compreensão real dos medos e da emoção de cada segundo.</p></div>
+        <div class="py-6 sm:pl-6 border-t sm:border-t-0 sm:border-l hair"><p class="font-serif text-2xl mb-1">Rigor hospitalar</p><p class="text-sm text-ink/60 font-light leading-relaxed">Cumprimento das normas de cada maternidade.</p></div>
+      </div>
+      <p class="mt-6 text-sm text-ink/55"><span class="font-serif text-2xl text-marsala mr-2">27 mil</span>seguidores no Instagram · centenas de partos acolhidos em São Paulo</p>
+    </div>
+  </div>
+</section>
 
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-revealed');
-                }
-            });
-        }, observerOptions);
+<!-- PROCESSO -->
+<section id="processo" class="py-24 md:py-32 bg-sand">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl rv">
+      <p class="eyebrow text-marsala mb-6">Como funciona</p>
+      <h2 class="h-display text-4xl md:text-6xl">Um protocolo pensado para <em>você sentir paz.</em></h2>
+    </div>
+    <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 border-t hair rv">
+      <div class="py-8 lg:pr-8"><span class="font-serif text-5xl text-rose">01</span><h3 class="font-serif text-2xl mt-4 mb-3">Alinhamento</h3><p class="text-sm text-ink/65 font-light leading-relaxed">Conversamos sobre o hospital, suas expectativas, desejos de privacidade e as orientações da sua equipe médica.</p></div>
+      <div class="py-8 lg:px-8 lg:border-l hair"><span class="font-serif text-5xl text-rose">02</span><h3 class="font-serif text-2xl mt-4 mb-3">Sobreaviso 24/7</h3><p class="text-sm text-ink/65 font-light leading-relaxed">A partir de 37 semanas, fico em prontidão. Às 14h de uma terça ou às 3h de um feriado, estou pronta para ir.</p></div>
+      <div class="py-8 lg:px-8 lg:border-l hair"><span class="font-serif text-5xl text-rose">03</span><h3 class="font-serif text-2xl mt-4 mb-3">O nascimento</h3><p class="text-sm text-ink/65 font-light leading-relaxed">Acompanho o trabalho de parto, o nascimento, as primeiras avaliações e o contato pele com pele, sem pressa.</p></div>
+      <div class="py-8 lg:pl-8 lg:border-l hair"><span class="font-serif text-5xl text-rose">04</span><h3 class="font-serif text-2xl mt-4 mb-3">Prévia em 48h</h3><p class="text-sm text-ink/65 font-light leading-relaxed">Você recebe uma prévia tratada com carinho para anunciar a chegada e celebrar com a família.</p></div>
+    </div>
+  </div>
+</section>
 
-        document.querySelectorAll('.reveal-on-scroll').forEach(section => {
-            scrollObserver.observe(section);
-        });
+<!-- COLEÇÕES -->
+<section id="colecoes" class="py-24 md:py-36 bg-linen">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mx-auto text-center rv">
+      <p class="eyebrow text-marsala mb-6">Coleções de memórias</p>
+      <h2 class="h-display text-4xl md:text-6xl">Escolha como eternizar <em>essa história.</em></h2>
+    </div>
+    <div class="mt-16 grid lg:grid-cols-3 gap-6 rv">
+      <article class="border hair p-9 lg:p-10 flex flex-col bg-white/40">
+        <p class="eyebrow text-marsala mb-5">Nascimento</p>
+        <h3 class="font-serif text-4xl mb-3">Coleção Nascimento</h3>
+        <p class="text-sm text-ink/60 font-light leading-relaxed">O registro completo do nascimento do seu bebê.</p>
+        <ul class="mt-8 pt-8 border-t hair space-y-3.5 text-sm text-ink/80 font-light flex-grow">
+          <li>Cobertura completa, parto normal ou cesárea</li><li>Sobreaviso 24/7 a partir de 37 semanas</li><li>Golden hour, pele com pele</li><li>Prévia em até 48 horas</li><li>Galeria privada em alta resolução</li>
+        </ul>
+        <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn mt-10">Consultar data</a>
+      </article>
+      <article class="border hair p-9 lg:p-10 flex flex-col bg-white/40">
+        <p class="eyebrow text-marsala mb-5">Gestantes</p>
+        <h3 class="font-serif text-4xl mb-3">Coleção Espera</h3>
+        <p class="text-sm text-ink/60 font-light leading-relaxed">A poesia e a conexão da gravidez, de forma leve e sem clichês.</p>
+        <ul class="mt-8 pt-8 border-t hair space-y-3.5 text-sm text-ink/80 font-light flex-grow">
+          <li>Ensaio documental em casa ou ao ar livre</li><li>Direção espontânea e acolhedora</li><li>Foco na conexão do casal e dos irmãos</li><li>Fotos com a identidade real de vocês</li>
+        </ul>
+        <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn mt-10">Consultar ensaio</a>
+      </article>
+      <article class="p-9 lg:p-10 flex flex-col bg-marsala-dark text-linen">
+        <p class="eyebrow text-rose mb-5">Experiência completa</p>
+        <h3 class="font-serif text-4xl mb-3">Coleção Boas-Vindas</h3>
+        <p class="text-sm text-linen/65 font-light leading-relaxed">Da espera aos primeiros dias com o bebê.</p>
+        <ul class="mt-8 pt-8 border-t border-linen/20 space-y-3.5 text-sm text-linen/85 font-light flex-grow">
+          <li>Ensaio gestante intimista</li><li>Cobertura de parto com sobreaviso 24/7</li><li>Mini-ensaio Fresh 48 na maternidade</li><li>Prioridade de agenda e prévia expressa</li>
+        </ul>
+        <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn btn-light mt-10">Quero a experiência completa</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-        // Conversion Tracking dataLayer Stubs
-        window.dataLayer = window.dataLayer || [];
-        function trackConversion(eventName, params) {
-            window.dataLayer.push({
-                event: eventName,
-                timestamp: new Date().toISOString(),
-                ...params
-            });
-            console.log('[Tracking Event]:', eventName, params);
-        }
+<!-- DEPOIMENTOS -->
+<section class="py-24 md:py-32 bg-sand">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+    <p class="eyebrow text-marsala text-center mb-16 rv">Histórias de famílias</p>
+    <div class="grid md:grid-cols-3 gap-12 md:gap-10 rv">
+      <figure>
+        <blockquote class="font-serif text-2xl leading-snug text-ink">“A Fran foi um anjo no meu parto. Nem percebemos que ela estava fotografando, de tão discreta. Quando as fotos chegaram, chorei tudo de novo.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t hair"><span class="block text-sm font-medium">Camila N.</span><span class="eyebrow !text-[10px] text-marsala">São Luiz Star · Parto normal</span></figcaption>
+      </figure>
+      <figure>
+        <blockquote class="font-serif text-2xl leading-snug text-ink">“Eu achava que foto de celular bastava, mas meu marido me convenceu a chamar a Fran. Foi a melhor decisão de todo o nosso enxoval.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t hair"><span class="block text-sm font-medium">Mariana S.</span><span class="eyebrow !text-[10px] text-marsala">Pro Matre · Cesárea humanizada</span></figcaption>
+      </figure>
+      <figure>
+        <blockquote class="font-serif text-2xl leading-snug text-ink">“Fiquei muito tranquila sabendo que ela estava lá, registrando tudo com delicadeza e respeito absoluto.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t hair"><span class="block text-sm font-medium">Juliana M.</span><span class="eyebrow !text-[10px] text-marsala">Santa Joana · Parto adequado</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-        // Track all WhatsApp CTA clicks
-        document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                trackConversion('whatsapp_dpp_click', {
-                    cta_text: btn.innerText.trim(),
-                    page_location: window.location.href
-                });
-            });
-        });
-    </script>
+<!-- FAQ -->
+<section id="faq" class="py-24 md:py-32 bg-linen">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-14 rv">
+      <p class="eyebrow text-marsala mb-6">Dúvidas frequentes</p>
+      <h2 class="h-display text-4xl md:text-5xl">Perguntas que toda gestante faz</h2>
+    </div>
+    <div class="border-t hair rv">
+      <details class="border-b hair py-6 group"><summary class="flex items-center justify-between gap-6"><span class="font-serif text-2xl">E se meu bebê nascer de madrugada, feriado ou fim de semana?</span><span class="plus text-3xl font-light text-marsala shrink-0">+</span></summary><p class="pt-4 text-sm md:text-base text-ink/70 font-light leading-relaxed">O sobreaviso a partir da 37ª semana é ininterrupto, 24 horas por dia, 7 dias por semana. Os bebês escolhem a hora deles, e eu estou pronta para sair a qualquer momento.</p></details>
+      <details class="border-b hair py-6"><summary class="flex items-center justify-between gap-6"><span class="font-serif text-2xl">Você fotografa parto normal e cesárea?</span><span class="plus text-3xl font-light text-marsala shrink-0">+</span></summary><p class="pt-4 text-sm md:text-base text-ink/70 font-light leading-relaxed">Sim. Atendo partos normais e cesáreas planejadas ou intraparto. Nas cesáreas, atuo devidamente paramentada dentro do centro cirúrgico.</p></details>
+      <details class="border-b hair py-6"><summary class="flex items-center justify-between gap-6"><span class="font-serif text-2xl">Preciso pedir autorização para a maternidade?</span><span class="plus text-3xl font-light text-marsala shrink-0">+</span></summary><p class="pt-4 text-sm md:text-base text-ink/70 font-light leading-relaxed">Já tenho documentação regularizada nas principais maternidades de São Paulo. Oriento você em todo o trâmite, para que não precise se preocupar com burocracia.</p></details>
+      <details class="border-b hair py-6"><summary class="flex items-center justify-between gap-6"><span class="font-serif text-2xl">Você usa flash no recém-nascido?</span><span class="plus text-3xl font-light text-marsala shrink-0">+</span></summary><p class="pt-4 text-sm md:text-base text-ink/70 font-light leading-relaxed">Nunca de forma invasiva. Uso lentes claras e câmeras de alta sensibilidade à luz, para captar a atmosfera suave da sala de parto sem assustar o bebê nem incomodar a equipe médica.</p></details>
+      <details class="border-b hair py-6"><summary class="flex items-center justify-between gap-6"><span class="font-serif text-2xl">Com quantas semanas devo fechar o contrato?</span><span class="plus text-3xl font-light text-marsala shrink-0">+</span></summary><p class="pt-4 text-sm md:text-base text-ink/70 font-light leading-relaxed">Como atendo um número limitado de partos por mês, para nunca haver sobreposição de datas, o ideal é reservar entre a 16ª e a 28ª semana de gestação.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="relative bg-marsala-dark text-linen overflow-hidden">
+  <img src="assets/opt/img_1009.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-35" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-t from-marsala-dark via-marsala-dark/60 to-marsala-dark/70"></div>
+  <div class="relative max-w-3xl mx-auto px-6 py-28 md:py-40 text-center rv">
+    <p class="eyebrow text-rose mb-8">Reserve a sua data</p>
+    <h2 class="h-display on-dark text-4xl md:text-7xl">Esse dia acontece uma vez. <em>Que ele seja lembrado.</em></h2>
+    <p class="mt-8 text-base md:text-lg text-linen/75 font-light leading-relaxed">Conte para a Fran a data provável do parto e receba, direto no WhatsApp, a disponibilidade e os próximos passos.</p>
+    <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn btn-light mt-12">Consultar disponibilidade</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-marsala-dark text-linen/70 border-t border-linen/10">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
+    <div><p class="font-serif text-3xl text-linen">Francielly Fragnan</p><p class="eyebrow !text-[10px] mt-2 text-rose">Parto em Foco · Nascer com respeito importa</p></div>
+    <div class="flex gap-8 eyebrow"><a href="https://instagram.com/francielly.fragnan" target="_blank" rel="noopener" class="hover:text-linen">Instagram</a><a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="hover:text-linen">WhatsApp</a></div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pb-10 text-[11px] leading-relaxed text-linen/45 border-t border-linen/10 pt-8">
+    <p>Todas as fotografias deste site foram realizadas com autorização das famílias retratadas. A intimidade e o nascimento respeitoso estão sempre em primeiro lugar.</p>
+    <p class="mt-2">© 2026 Francielly Fragnan · Parto em Foco · São Paulo, SP</p>
+  </div>
+</footer>
+
+<!-- BARRA MOBILE -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-linen/95 backdrop-blur border-t hair px-4 py-3 flex items-center justify-between gap-4">
+  <span class="eyebrow !text-[10px] text-marsala leading-snug">Agenda limitada<br>por mês</span>
+  <a href="https://wa.me/5511960897445" target="_blank" rel="noopener" class="btn !py-3 !px-6 !text-[11px]">Consultar data</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('solid',window.scrollY>60)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+  // FAQ: abre um por vez
+  document.querySelectorAll('details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('details').forEach(function(o){if(o!==d)o.open=false})})});
+  // tracking
+  window.dataLayer=window.dataLayer||[];
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){a.addEventListener('click',function(){window.dataLayer.push({event:'whatsapp_dpp_click',cta_text:a.innerText.trim(),page_location:location.href})})});
+})();
+</script>
 </body>
 </html>
