@@ -37,6 +37,7 @@ body{background:#FAF6F2;color:#2A1416;font-family:'Plus Jakarta Sans',sans-serif
 #nav{transition:background .4s,box-shadow .4s,color .4s}
 #nav.solid{background:rgba(250,246,242,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(105,23,26,.12);color:#2A1416}
 #nav.solid .nav-cta{border-color:#69171A;color:#69171A}
+.ticker{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.ticker-track{animation:tick 35s linear infinite;will-change:transform}.ticker:hover .ticker-track{animation-play-state:paused}@keyframes tick{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}@media(prefers-reduced-motion:reduce){.ticker-track{animation-duration:70s}}
 /* galeria masonry */
 @media(min-width:640px){@media(min-width:1024px){@media(min-width:1024px){.g-img{transition:transform 1.2s cubic-bezier(.16,1,.3,1)}figure:hover .g-img{transform:scale(1.035)}
 /* faq */
@@ -49,7 +50,6 @@ details[open] .plus{transform:rotate(45deg)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 ::selection{background:#EDDEDE;color:#2E0608}
-.ticker{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.ticker-track{animation:tick 35s linear infinite;will-change:transform}.ticker:hover .ticker-track{animation-play-state:paused}@keyframes tick{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}@media(prefers-reduced-motion:reduce){.ticker-track{animation-duration:70s}}
 </style>
 </head>
 <body class="pb-20 md:pb-0">
